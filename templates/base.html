@@ -10,10 +10,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    {% endblock %} 
-    {% block extra_meta %} 
-    {% endblock %} 
-    {% block corecss %}
+    {% endblock %} {% block extra_meta %} {% endblock %} {% block corecss %}
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -27,10 +24,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    {% endblock %} 
-    {% block extra_css %} 
-    {% endblock %} 
-    {% block corejs %}
+    {% endblock %} {% block extra_css %} {% endblock %} {% block corejs %}
     <script
       src="https://kit.fontawesome.com/d3c4a3d152.js"
       crossorigin="anonymous"
@@ -50,9 +44,7 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-    {% endblock %} 
-    {% block extra_js %} 
-    {% endblock %}
+    {% endblock %} {% block extra_js %} {% endblock %}
 
     <title>Boutique Ado {% block extra_title %}{% endblock %}</title>
   </head>
@@ -132,16 +124,13 @@
             <li class="list-inline-item">
               <a
                 class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                href=""
+                href="{% url 'view_bag' %}"
               >
                 <div class="text-center">
                   <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                   <p class="my-0">
-                    {% if grand_total %} 
-                    ${{ grand_total|floatformat:2 }}
-                    {%else%} 
-                    $0.00 
-                    {% endif %}
+                    {% if grand_total %} ${{ grand_total|floatformat:2 }}
+                    {%else%} $0.00 {% endif %}
                   </p>
                 </div>
               </a>
@@ -169,7 +158,7 @@
       <div id="delivery-banner" class="row text-center">
         <div class="col bg-black text-white">
           <h4 class="logo-font my-1">
-            Free delivery on orders over ${{ free_shipping_threshold }}!
+            Free delivery on orders over ${{ free_delivery_threshold }}!
           </h4>
         </div>
       </div>
