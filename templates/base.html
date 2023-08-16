@@ -10,7 +10,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    {% endblock %} {% block extra_meta %} {% endblock %} {% block corecss %}
+    {% endblock %} 
+
+    {% block extra_meta %}
+    {% endblock %}
+
+    {% block corecss %}
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -24,14 +29,19 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    {% endblock %} {% block extra_css %} {% endblock %} {% block corejs %}
+    {% endblock %}
+
+    {% block extra_css %}
+    {% endblock %}
+
+    {% block corejs %}
     <script
       src="https://kit.fontawesome.com/d3c4a3d152.js"
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
     <script
@@ -45,9 +55,8 @@
       crossorigin="anonymous"
     ></script>
     {% endblock %}
-
-    {% block extra_js %} 
     
+    {% block extra_js %}
     {% endblock %}
 
     <title>Boutique Ado {% block extra_title %}{% endblock %}</title>
@@ -107,7 +116,7 @@
                 class="dropdown-menu border-0"
                 aria-labelledby="user-options"
               >
-                {% if request.user.is_authenticated %} 
+                {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                 <a href="" class="dropdown-item">Product Management</a>
                 {% endif %}
@@ -169,7 +178,15 @@
     </header>
     {% if messages %}
     <div class="message-container"></div>
-    {% endif %} {% block page_header %} {% endblock %} {% block content %} 
-    {% endblock %} {% block postloadjs %} {% endblock %}
+    {% endif %} 
+
+    {% block page_header %} 
+    {% endblock %} 
+
+    {% block content %}
+    {% endblock %}
+
+    {% block postloadjs %}
+    {% endblock %}
   </body>
 </html>
