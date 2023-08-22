@@ -1,0 +1,7 @@
+#profile-update-form input {
+    color: #000;
+}
+
+#profile-update-form input::placeholder {
+    color: #aab7c4;
+}
