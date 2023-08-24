@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-xiic%o%s$w&d94-6wezb-gy$ktlrn47e2a!_-kk7hdb4rt$@*5
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-kailangen96-boutique-ado-q8rieijpe8.us2.codeanyapp.com',
-                 'https://boutique-ado-kai-c9a9767be92e.herokuapp.com/']
+                 'boutique-ado-kai-c9a9767be92e.herokuapp.com']
 
 
 # Application definition
